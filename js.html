@@ -1,0 +1,20 @@
+<form id="loginForm">
+  <input type="text" id="username" required>
+  <input type="password" id="password" required>
+  <button type="submit">Yuborish</button>
+</form>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  // AJAX yoki local tekshiruv
+  if (user === "admin" && pass === "2525") {
+    window.location.href = "dashboard.html"; // sahifaga o'tkazish
+  } else {
+    alert("Login yoki parol noto‘g‘ri");
+  }
+});
+</script>
